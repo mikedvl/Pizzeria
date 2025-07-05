@@ -1,0 +1,17 @@
+[
+  {
+    "ProductId": "pizza_margherita",
+    "ProductName": "Pizza Margherita",
+    "Price": 9.99
+  },
+  {
+    "ProductId": "pizza_pepperoni",
+    "ProductName": "Pizza Pepperoni",
+    "Price": 11.49
+  },
+  {
+    "ProductId": "pizza_veggie",
+    "ProductName": "Pizza Veggie",
+    "Price": 10.99
+  }
+]

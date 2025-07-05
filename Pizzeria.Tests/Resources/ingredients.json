@@ -1,0 +1,19 @@
+{
+  "pizza_margherita": [
+    { "Name": "Dough", "Amount": 0.3 },
+    { "Name": "Tomato Sauce", "Amount": 0.1 },
+    { "Name": "Mozzarella", "Amount": 0.15 }
+  ],
+  "pizza_pepperoni": [
+    { "Name": "Dough", "Amount": 0.3 },
+    { "Name": "Tomato Sauce", "Amount": 0.1 },
+    { "Name": "Mozzarella", "Amount": 0.15 },
+    { "Name": "Pepperoni", "Amount": 0.2 }
+  ],
+  "pizza_veggie": [
+    { "Name": "Dough", "Amount": 0.3 },
+    { "Name": "Tomato Sauce", "Amount": 0.1 },
+    { "Name": "Mozzarella", "Amount": 0.15 },
+    { "Name": "Vegetables", "Amount": 0.25 }
+  ]
+}

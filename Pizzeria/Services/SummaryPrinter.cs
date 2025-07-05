@@ -15,7 +15,7 @@ public class SummaryPrinter : ISummaryPrinter
         PrintTotalIngredients(summary, usdCulture);
     }
 
-    private void PrintOverview(List<ValidatedOrder> orders)
+    private static void PrintOverview(List<ValidatedOrder> orders)
     {
         var rawEntryCount = orders.SelectMany(o => o.Items).Count();
         var uniqueOrderCount = orders.Count;
@@ -27,7 +27,7 @@ public class SummaryPrinter : ISummaryPrinter
         Console.WriteLine($"Total pizza items (by quantity): {totalPizzaCount}\n");
     }
 
-    private void PrintOrderDetails(List<ValidatedOrder> orders, CultureInfo usdCulture)
+    private static void PrintOrderDetails(List<ValidatedOrder> orders, CultureInfo usdCulture)
     {
         Console.WriteLine("===== VALID ORDERS SUMMARY =====\n");
 
@@ -54,7 +54,7 @@ public class SummaryPrinter : ISummaryPrinter
         }
     }
 
-    private void PrintTotalIngredients(SummaryResult summary, CultureInfo usdCulture)
+    private static void PrintTotalIngredients(SummaryResult summary, CultureInfo usdCulture)
     {
         Console.WriteLine("===== TOTAL INGREDIENTS REQUIRED =====\n");
 

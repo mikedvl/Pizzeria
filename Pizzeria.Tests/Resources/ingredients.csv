@@ -1,0 +1,12 @@
+ProductId,IngredientName,Amount
+pizza_margherita,Dough,0.3
+pizza_margherita,Tomato Sauce,0.1
+pizza_margherita,Mozzarella,0.15
+pizza_pepperoni,Dough,0.3
+pizza_pepperoni,Tomato Sauce,0.1
+pizza_pepperoni,Mozzarella,0.15
+pizza_pepperoni,Pepperoni,0.2
+pizza_veggie,Dough,0.3
+pizza_veggie,Tomato Sauce,0.1
+pizza_veggie,Mozzarella,0.15
+pizza_veggie,Vegetables,0.25

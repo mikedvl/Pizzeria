@@ -18,7 +18,6 @@ public class OrderService(
         {
             var orders = (await cacheService.GetOrdersAsync()).ToList();
             var products = await cacheService.GetProductsAsync();
-
             var summary = summaryResultFactory.Create(orders, products);
 
             logger.LogInformation("Valid orders: {Count}", summary.ValidatedOrders.Count);

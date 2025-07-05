@@ -23,7 +23,7 @@ public class CsvParser : IParser
 
             if (!map.TryGetValue(productId, out var list))
             {
-                list = new List<Ingredient>();
+                list = [];
                 map[productId] = list;
             }
 
@@ -71,10 +71,8 @@ public class CsvParser : IParser
             if (parts.Length < 3)
                 return null;
 
-            if (!decimal.TryParse(parts[2].Trim(), NumberStyles.Number, CultureInfo.InvariantCulture, out var price))
-                return null;
-
-            return new Product(parts[0].Trim(), parts[1].Trim(), price);
+            return !decimal.TryParse(parts[2].Trim(), NumberStyles.Number, CultureInfo.InvariantCulture, out var price) ? 
+                null : new Product(parts[0].Trim(), parts[1].Trim(), price);
         });
     }
 
@@ -90,8 +88,8 @@ public class CsvParser : IParser
     {
         var result = new List<T>();
         using var reader = new StreamReader(path);
-        bool isFirstLine = true;
-        char delimiter = ',';
+        var isFirstLine = true;
+        var delimiter = ',';
 
         while (await reader.ReadLineAsync() is { } line)
         {
@@ -117,8 +115,8 @@ public class CsvParser : IParser
     {
         var result = new Dictionary<string, List<Ingredient>>(StringComparer.OrdinalIgnoreCase);
         using var reader = new StreamReader(path);
-        bool isFirstLine = true;
-        char delimiter = ',';
+        var isFirstLine = true;
+        var delimiter = ',';
 
         while (await reader.ReadLineAsync() is { } line)
         {

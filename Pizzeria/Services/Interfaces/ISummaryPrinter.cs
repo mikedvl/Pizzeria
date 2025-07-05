@@ -1,4 +1,3 @@
-using Pizzeria.Models;
 using Pizzeria.Models.Dto;
 
 namespace Pizzeria.Services.Interfaces;
