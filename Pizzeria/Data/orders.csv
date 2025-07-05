@@ -1,0 +1,4 @@
+OrderId,ProductId,Quantity,CreatedAt,DeliveryAt,DeliveryAddress
+1001,pizza_margherita,2,2025-07-04T10:00:00,2025-07-04T11:00:00,123 Pizza Street
+1001,pizza_pepperoni,1,2025-07-04T10:00:00,2025-07-04T11:00:00,123 Pizza Street
+1002,pizza_veggie,3,2025-07-04T09:30:00,2025-07-04T10:15:00,456 Veggie Ave

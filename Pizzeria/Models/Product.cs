@@ -6,5 +6,5 @@ public record Product(
     decimal Price
 )
 {
-    public List<Ingredient> Ingredients { get; init; } = new();
+    public List<Ingredient> Ingredients { get; } = new();
 }

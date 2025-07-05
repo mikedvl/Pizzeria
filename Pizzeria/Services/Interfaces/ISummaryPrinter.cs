@@ -1,8 +1,9 @@
 using Pizzeria.Models;
+using Pizzeria.Models.Dto;
 
 namespace Pizzeria.Services.Interfaces;
 
 public interface ISummaryPrinter
 {
-    Task PrintAsync(List<ValidatedOrder> orders);
+    public void Print(SummaryResult summary);
 }

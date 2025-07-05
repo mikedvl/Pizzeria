@@ -1,9 +1,10 @@
 using Pizzeria.Models;
+using Pizzeria.Models.Dto;
 using Pizzeria.Services.Interfaces;
 
 namespace Pizzeria.Services;
 
-public class PriceCalculator : IPriceCalculator
+public class OrderCalculator : IOrderCalculator
 {
     public void Calculate(ValidatedOrder order, IReadOnlyList<Product> products)
     {
@@ -26,5 +27,21 @@ public class PriceCalculator : IPriceCalculator
 
         order.TotalPrice = total;
         order.RequiredIngredients = ingredients;
+    }
+    
+    public Dictionary<string, decimal> CalculateTotalIngredients(List<ValidatedOrder> orders)
+    {
+        var totalIngredients = new Dictionary<string, decimal>();
+        
+        foreach (var order in orders)
+        {
+            foreach (var (name, amount) in order.RequiredIngredients)
+            {
+                totalIngredients.TryAdd(name, 0);
+                totalIngredients[name] += amount;
+            }
+        }
+
+        return totalIngredients;
     }
 }
